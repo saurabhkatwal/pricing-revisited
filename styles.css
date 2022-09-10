@@ -7,6 +7,7 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    max-width: 100%;
 }
 
 /*-----------------------------------------------TOGGLE BUTTON------------------------------------------*/
@@ -97,27 +98,29 @@ body {
 }
 
 .prices {
-    padding: 30px 30px;
     border-radius: 10px;
+    max-width: 90%;
+    padding: 30px;
+    margin: auto;
 }
 
 .features>p {
-    padding: 10px;
-    padding-top: 20px;
+    padding: 5px;
+    padding-top: 12px;
 }
 
 #pricing {
-    background-color: #F2F2F2;
-    padding-top: 40px;
+    background-color: #eee;
     padding: 30px;
-    background-image: url("images/bg-top.svg");
+    padding-top: 0;
+    background-image: url("images/bg-top.svg"),url("images/bg-bottom.svg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: right top;
+    background-position: right top bottom left;
 }
 
 #pricing h3 {
-    padding: 20px;
+    padding: 10px;
     margin-top: 0;
 }
 
@@ -132,7 +135,8 @@ body {
 }
 
 .price-tag {
-    font-size: 5rem;
+    font-size: 4.5rem;
+    margin:20px auto;
 }
 
 .price1>p,
@@ -165,17 +169,26 @@ body {
 .toggle-btn label {
     cursor: pointer;
 }
-@media(min-width:376px){
+ @media(min-width:376px){
     .pricing-cols{
         display: flex;
         justify-content: center;
         padding-left: 8%;
         padding-right: 8%;
-        /* height: 520px; */
-        align-items: center;
     }
     .price2{
         align-self: stretch;
+    }
+    #pricing{
+        width: 90%;
+        padding:30px;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #8f8f8f;
     }
     
 }
