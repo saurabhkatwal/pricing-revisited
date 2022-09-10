@@ -1,0 +1,95 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2rem;
+}
+
+/*-----------------------------------------------TOGGLE BUTTON------------------------------------------*/
+.toggle-btn input {
+    display: none;
+}
+
+.toggle-btn>label {
+    display: block;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #999;
+    transition: background-color 0.3s ease-in;
+    position: relative;
+}
+
+.toggle-btn label::before {
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 2px;
+    border-radius: 50%;
+    left: 3px;
+    transition: left 0.3s ease-in;
+}
+
+.toggle-btn input:checked+label {
+    background-color: dodgerblue;
+}
+
+.toggle-btn input:checked+label::before {
+    left: 31px;
+    transition: left 0.3s ease-in;
+}
+
+
+
+/*---------------------------------------------GENERAL----------------------------------------------*/
+
+.toggler {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+#pricing>h3 {
+    text-align: center;
+}
+
+.pricing-cols>div {
+    text-align: center;
+}
+
+.features p {
+    border-top: 2px solid #888;
+}
+
+.btn1 button,
+.btn3 button {
+    width: 100%;
+    font-size: 2rem;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+    padding: 1rem 1.5rem;
+}
+
+.btn2 button {
+    background-color: #fff;
+    color: rgba(24, 56, 236, 0.712);
+    padding: 1rem 1.5rem;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.price2 {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+}
+.prices{
+    padding:30px 30px;
+    border-radius: 10px;
+}
+.features>p{
+    padding:10px;
+}
