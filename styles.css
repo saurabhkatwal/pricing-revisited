@@ -4,8 +4,9 @@ html {
 
 body {
     font-size: 2rem;
-    margin:0;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 /*-----------------------------------------------TOGGLE BUTTON------------------------------------------*/
@@ -84,36 +85,97 @@ body {
     font-size: 2rem;
 }
 
+.btn button {
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .price2 {
     background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     color: #fff;
 }
-.prices{
-    padding:30px 30px;
+
+.prices {
+    padding: 30px 30px;
     border-radius: 10px;
 }
-.features>p{
-    padding:10px;
+
+.features>p {
+    padding: 10px;
+    padding-top: 20px;
 }
-#pricing{
+
+#pricing {
     background-color: #F2F2F2;
-    padding-top:40px;
-    padding:30px;
+    padding-top: 40px;
+    padding: 30px;
     background-image: url("images/bg-top.svg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right top;
 }
-#pricing h3{
-    padding:20px;
+
+#pricing h3 {
+    padding: 20px;
     margin-top: 0;
 }
-.price1,.price3{
+
+.price1,
+.price3 {
     background-color: #fff;
 }
-.prices{
-    margin-top:30px;
+
+.prices {
+    margin-top: 30px;
+    width: 100%;
 }
-h1{
+
+.price-tag {
     font-size: 5rem;
+}
+
+.price1>p,
+.price2>p,
+.price3>p {
+    font-weight: bold;
+}
+
+.btn1 button:hover {
+    background-image: linear-gradient(to right, #fff, #fff);
+    border-color: hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+}
+
+.btn3 button:hover {
+    background-image: linear-gradient(to right, #fff, #fff);
+    border-color: hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+}
+
+.btn2 button:hover {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+}
+
+.toggler>label {
+    color: #999;
+}
+
+.toggle-btn label {
+    cursor: pointer;
+}
+@media(min-width:376px){
+    .pricing-cols{
+        display: flex;
+        justify-content: center;
+        padding-left: 8%;
+        padding-right: 8%;
+        /* height: 520px; */
+        align-items: center;
+    }
+    .price2{
+        align-self: stretch;
+    }
+    
 }
