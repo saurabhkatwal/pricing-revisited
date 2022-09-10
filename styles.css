@@ -4,6 +4,8 @@ html {
 
 body {
     font-size: 2rem;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*-----------------------------------------------TOGGLE BUTTON------------------------------------------*/
@@ -92,4 +94,26 @@ body {
 }
 .features>p{
     padding:10px;
+}
+#pricing{
+    background-color: #F2F2F2;
+    padding-top:40px;
+    padding:30px;
+    background-image: url("images/bg-top.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+}
+#pricing h3{
+    padding:20px;
+    margin-top: 0;
+}
+.price1,.price3{
+    background-color: #fff;
+}
+.prices{
+    margin-top:30px;
+}
+h1{
+    font-size: 5rem;
 }
