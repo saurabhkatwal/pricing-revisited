@@ -12,13 +12,13 @@ body{
     padding: 0;
 }
 /*-----------------------------------------------TOGGLE BUTTON------------------------------------------*/
-.toggle-btn input {
+/* .toggle-btn input {
     display: none;
-}
+} */
 .price-tag{
     display: none;
 }
-.toggle-btn>label {
+.toggle-btn label {
     display: block;
     width: 60px;
     height: 30px;
@@ -49,11 +49,14 @@ body{
     left: 31px;
     transition: left 0.3s ease-in;
 }
-.toggler{
+/* .toggler{
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 2rem;
+} */
+.toggle-btn input{
+    display: none;
 }
 
 /*--------------------------------------------Rest of page-------------------------------------------*/
@@ -66,6 +69,8 @@ body{
 }
 .pricing-cols{
     margin-top: 4rem;
+    position: absolute;
+    left: 0;
 }
 .btn button{
     width: 100%;
@@ -93,11 +98,23 @@ p{
 .price-tag-a{
     display: block;
 }
-.toggle-btn>input:checked ~ .pricing-cols .price-tag-m{
+.toggle-btn input:checked ~ .pricing-cols .price-tag-m{
     display: block;
 }
-.toggle-btn>input:checked ~ .pricing-cols .price-tag-a{
+.toggle-btn input:checked ~ .pricing-cols .price-tag-a{
     display: none;
+}
+.toggle{
+    display: flex;
+    justify-content: center;
+}
+.toggle-btn{
+    position:relative;
+}
+.pricing-cols{
+    position: absolute;
+    left:20%;
+    top:3rem;
 }
 @media(min-width:487px){
     .pricing-cols{
