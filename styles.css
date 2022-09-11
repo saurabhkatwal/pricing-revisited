@@ -1,23 +1,28 @@
-html{
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     height: auto;
+    background-color: #FCF8E8;
 }
-*{
-    margin:0;
+
+* {
+    margin: 0;
     padding: 0;
 }
+
 /*-----------------------------------------------TOGGLE BUTTON------------------------------------------*/
 /* .toggle-btn input {
     display: none;
 } */
-.price-tag{
+.price-tag {
     display: none;
 }
+
 .toggle-btn label {
     display: block;
     width: 60px;
@@ -49,90 +54,151 @@ body{
     left: 31px;
     transition: left 0.3s ease-in;
 }
+
 /* .toggler{
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 2rem;
 } */
-.toggle-btn input{
+.toggle-btn input {
     display: none;
 }
 
 /*--------------------------------------------Rest of page-------------------------------------------*/
-#pricing h3{
+#pricing {
+    background: url('images/bg-top.svg') no-repeat fixed right top, url('images/bg-bottom.svg') no-repeat fixed left bottom;
+    background-color: hsl(240, 78%, 98%);
+}
+.price-tag{
+    font-size: 2.5rem;
+}
+
+#pricing h3 {
     text-align: center;
+    margin-top: 2.5rem;
     margin-bottom: 1.5rem;
 }
-.content{
+
+.content {
     text-align: center;
 }
-.pricing-cols{
+
+.pricing-cols {
     margin-top: 4rem;
     position: absolute;
-    left: 0;
 }
-.btn button{
+
+.btn button {
     width: 100%;
 }
-p{
+
+p {
     padding: 2rem;
 }
-.price2{
+
+.price2 {
     background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     color: #fff;
 }
-.features>p{
+
+/* .features>p {
     border-top: 1px solid #999;
-}
-.prices{
+} */
+
+.prices {
     padding: 2rem;
     border-radius: 1rem;
 }
-.btn button{
+
+.btn button {
     /* padding: 1rem 1.5rem; */
     font-weight: bold;
     padding: 1rem 1.5rem;
     border-radius: 1rem;
 }
-.price-tag-a{
+.btn1 button,.btn3 button{
+    background-color: hsl(236, 72%, 79%);
+    color:#fff;
+}
+.btn2 button{
+    color:hsl(236, 72%, 79%);
+    background-color: #fff;
+}
+.btn2 button:hover{
+    color:#fff;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-color: #fff;
+    cursor: pointer;
+}
+.btn1 button:hover,.btn3 button:hover{
+    background-color: #fff;
+    color: hsl(236, 72%, 79%);
+    border-color: hsl(236, 72%, 79%);
+    cursor: pointer;
+}
+.price-tag-a {
     display: block;
 }
-.toggle-btn input:checked ~ .pricing-cols .price-tag-m{
+
+.toggle-btn input:checked~.pricing-cols .price-tag-m {
     display: block;
 }
-.toggle-btn input:checked ~ .pricing-cols .price-tag-a{
+
+.toggle-btn input:checked~.pricing-cols .price-tag-a {
     display: none;
 }
-.toggle{
+
+.toggle {
+
     display: flex;
     justify-content: center;
+    /* align-items: center;
+    column-gap: 2rem;
+    margin-top: 1rem; */
 }
-.toggle-btn{
-    position:relative;
+
+/* .toggle-btn {
+    position: relative;
+} */
+.price1,.price3{
+    background-color: #fff;
 }
-.pricing-cols{
-    position: absolute;
-    left:20%;
-    top:3rem;
+#in-toggle{
+    cursor: pointer;
 }
-@media(min-width:487px){
-    .pricing-cols{
+.price2 .features>p{
+border-top:1px solid hsl(240, 78%, 98%);
+}
+.price1 .features>p, .price3 .features>p{
+    border-top: 1px solid #999;
+}
+@media(min-width:487px) {
+    .pricing-cols {
         display: flex;
         justify-content: center;
         align-items: center;
+        /* position: absolute; */
+        /* left: 20%; */
+        /* top: 3rem; */
     }
-    body{
+
+    body {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    #pricing{
-        width: 70%;
+
+    #pricing {
+        width: 120rem;
         height: 80%;
+        /* background: url('images/bg-top.svg') no-repeat right top,url('images/bg-bottom.svg') no-repeat left bottom;
+        background-color: hsl(240, 78%, 98%); */
     }
-    .prices{
+
+    .prices {
         max-height: 41.5rem;
+        width: 100%;
     }
 }
