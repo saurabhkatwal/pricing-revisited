@@ -1,20 +1,23 @@
-html {
+html{
     font-size: 62.5%;
 }
-
-body {
-    font-size: 2rem;
-    margin: 0;
+body{
+    font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    max-width: 100%;
+    height: auto;
 }
-
+*{
+    margin:0;
+    padding: 0;
+}
 /*-----------------------------------------------TOGGLE BUTTON------------------------------------------*/
 .toggle-btn input {
     display: none;
 }
-
+.price-tag{
+    display: none;
+}
 .toggle-btn>label {
     display: block;
     width: 60px;
@@ -46,149 +49,73 @@ body {
     left: 31px;
     transition: left 0.3s ease-in;
 }
-
-
-
-/*---------------------------------------------GENERAL----------------------------------------------*/
-
-.toggler {
+.toggler{
     display: flex;
     justify-content: center;
-    column-gap: 15px;
+    align-items: center;
+    column-gap: 2rem;
 }
 
-#pricing>h3 {
+/*--------------------------------------------Rest of page-------------------------------------------*/
+#pricing h3{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.content{
     text-align: center;
 }
-
-.pricing-cols>div {
-    text-align: center;
+.pricing-cols{
+    margin-top: 4rem;
 }
-
-.features p {
-    border-top: 2px solid #888;
-}
-
-.btn1 button,
-.btn3 button {
+.btn button{
     width: 100%;
-    font-size: 2rem;
+}
+p{
+    padding: 2rem;
+}
+.price2{
     background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     color: #fff;
-    padding: 1rem 1.5rem;
 }
-
-.btn2 button {
-    background-color: #fff;
-    color: rgba(24, 56, 236, 0.712);
-    padding: 1rem 1.5rem;
-    width: 100%;
-    font-size: 2rem;
+.features>p{
+    border-top: 1px solid #999;
 }
-
-.btn button {
-    border-radius: 10px;
-    cursor: pointer;
+.prices{
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.btn button{
+    /* padding: 1rem 1.5rem; */
     font-weight: bold;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
 }
-
-.price2 {
-    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-    color: #fff;
+.price-tag-a{
+    display: block;
 }
-
-.prices {
-    border-radius: 10px;
-    max-width: 90%;
-    padding: 30px;
-    margin: auto;
+.toggle-btn>input:checked ~ .pricing-cols .price-tag-m{
+    display: block;
 }
-
-.features>p {
-    padding: 5px;
-    padding-top: 12px;
+.toggle-btn>input:checked ~ .pricing-cols .price-tag-a{
+    display: none;
 }
-
-#pricing {
-    background-color: #eee;
-    padding: 30px;
-    padding-top: 0;
-    background-image: url("images/bg-top.svg"),url("images/bg-bottom.svg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: right top bottom left;
-}
-
-#pricing h3 {
-    padding: 10px;
-    margin-top: 0;
-}
-
-.price1,
-.price3 {
-    background-color: #fff;
-}
-
-.prices {
-    margin-top: 30px;
-    width: 100%;
-}
-
-.price-tag {
-    font-size: 4.5rem;
-    margin:20px auto;
-}
-
-.price1>p,
-.price2>p,
-.price3>p {
-    font-weight: bold;
-}
-
-.btn1 button:hover {
-    background-image: linear-gradient(to right, #fff, #fff);
-    border-color: hsl(237, 63%, 64%);
-    color: hsl(237, 63%, 64%);
-}
-
-.btn3 button:hover {
-    background-image: linear-gradient(to right, #fff, #fff);
-    border-color: hsl(237, 63%, 64%);
-    color: hsl(237, 63%, 64%);
-}
-
-.btn2 button:hover {
-    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-    color: #fff;
-}
-
-.toggler>label {
-    color: #999;
-}
-
-.toggle-btn label {
-    cursor: pointer;
-}
- @media(min-width:376px){
+@media(min-width:487px){
     .pricing-cols{
         display: flex;
         justify-content: center;
-        padding-left: 8%;
-        padding-right: 8%;
-    }
-    .price2{
-        align-self: stretch;
-    }
-    #pricing{
-        width: 90%;
-        padding:30px;
+        align-items: center;
     }
     body{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         height: 100vh;
-        background-color: #8f8f8f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    
+    #pricing{
+        width: 70%;
+        height: 80%;
+    }
+    .prices{
+        max-height: 41.5rem;
+    }
 }
