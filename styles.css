@@ -55,20 +55,18 @@ body {
     transition: left 0.3s ease-in;
 }
 
-/* .toggler{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 2rem;
-} */
+
 .toggle-btn input {
     display: none;
 }
 
 /*--------------------------------------------Rest of page-------------------------------------------*/
 #pricing {
-    background: url('images/bg-top.svg') no-repeat fixed right top, url('images/bg-bottom.svg') no-repeat fixed left bottom;
+    background: url('images/bg-top.svg') no-repeat fixed right top;
+    background-size:50%;
     background-color: hsl(240, 78%, 98%);
+    height: 130rem;
+    padding-top: 2rem;
 }
 .price-tag{
     font-size: 2.5rem;
@@ -87,6 +85,9 @@ body {
 .pricing-cols {
     margin-top: 4rem;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
 }
 
 .btn button {
@@ -157,6 +158,12 @@ p {
     column-gap: 2rem;
     margin-top: 1rem; */
 }
+#annual{
+    margin-right: 1rem;
+}
+#month{
+    margin-left: 1rem;
+}
 
 /* .toggle-btn {
     position: relative;
@@ -176,13 +183,18 @@ border-top:1px solid hsl(240, 78%, 98%);
 @media(min-width:487px) {
     .pricing-cols {
         display: flex;
+        flex-direction: row;
         justify-content: center;
-        align-items: center;
-        /* position: absolute; */
+        align-items: flex-end;
+        width: 60%;
+        height: 40rem;
+        position: absolute;
         /* left: 20%; */
-        /* top: 3rem; */
+        top: 14rem;
     }
-
+    #pricing h3{
+        margin-bottom: 3rem;
+    }
     body {
         height: 100vh;
         display: flex;
@@ -191,14 +203,16 @@ border-top:1px solid hsl(240, 78%, 98%);
     }
 
     #pricing {
+        position: relative;
         width: 120rem;
-        height: 80%;
-        /* background: url('images/bg-top.svg') no-repeat right top,url('images/bg-bottom.svg') no-repeat left bottom;
-        background-color: hsl(240, 78%, 98%); */
+        height: 85%;
+        background: url('images/bg-top.svg') no-repeat right top,url('images/bg-bottom.svg') no-repeat left bottom;
+        background-color: hsl(240, 78%, 98%);
     }
 
     .prices {
         max-height: 41.5rem;
+        min-height: 40rem;
         width: 100%;
     }
 }
